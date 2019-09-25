@@ -168,7 +168,8 @@ void PrintResults(int sum, double x1, double x2){
  *
  */
 int IsZero(double value){
-    if (fabs(value) <= 1e-7) return TRUE;
+    double zero = value * 1e-10;
+    if (fabs(value) <= zero) return TRUE;
     else return FALSE;
 }
 
@@ -179,12 +180,6 @@ void UnitTest(){
     //  Number of arrayTEST[][i]
     //  i  =  | 0  1  2  3   4   5
     //  mean  | a  b  c  x1  x2  sum
-   /* double arrayTEST[nTest][6]{
-        1,  6,  9, -3,  0, 1,
-        0,  1,  3, -3,  0, 1,
-        1,  0, -9,  3, -3, 2,
-        1, -5,  0,  0,  5, 2
-    }; */
     struct TEST {
         double a;
         double b;
@@ -203,9 +198,7 @@ void UnitTest(){
     for (int i = 0; i<nTest; i++){
         double x1 = NAN, x2 = NAN;
         double *data = (double*) calloc(3, sizeof(data[0]));
-//        for (int j = 0; j < 3; j++){
-//            data[j] = arrayTEST[i];
-//        }
+
         data[0] = arrayTEST[i].a;
         data[1] = arrayTEST[i].b;
         data[2] = arrayTEST[i].c;
@@ -235,10 +228,6 @@ void UnitTest(){
                 assert(IsZero(x2 - arrayTEST[i].x2));
             }
         }
-       /* if (sum != arrayTEST[i][5] || sum == 1 || sum == 2){
-            printf("Error on %d test:\nprogram: %d  test:  %lg\n", i, sum, arrayTEST[i][5]);
-            assert(IsZero(sum - arrayTEST[i][5]));
-        } */
     }
     printf("test : OK");
 }
