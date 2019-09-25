@@ -1,0 +1,320 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_ab946e2e7f7679350627acfded8e2658b}{T\+E\+ST}}~1
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a28c2d2643e62aabda9552ff5adec451d}{N\+O\+R\+E\+S\+U\+LT}}~0
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a78a18ca3348b4ffa93578a21a8f54d2f}{O\+N\+E\+R\+E\+S\+U\+LT}}~1
+\item 
+\#define \mbox{\hyperlink{main_8cpp_ae8622b44263ff9e536c6a9e28c3a23aa}{T\+W\+O\+R\+E\+S\+U\+LT}}~2
+\item 
+\#define \mbox{\hyperlink{main_8cpp_abc207fc2074a4aa06980f3330bab0dd7}{U\+N\+L\+I\+M\+R\+E\+S\+U\+LT}}~3
+\item 
+\#define \mbox{\hyperlink{main_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}~1
+\item 
+\#define \mbox{\hyperlink{main_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ab2dd9b24e0e487efdd1cd1f40dd3a023}{Solve\+Square}} (double a, double b, double c, double $\ast$x1, double $\ast$x2)
+\begin{DoxyCompactList}\small\item\em quadratic solution \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_afd2562725d73678eb0bb27d17e90be40}{Solve\+LinearA}} (double b, double c, double $\ast$x1)
+\begin{DoxyCompactList}\small\item\em quadratic solution if \char`\"{}a\char`\"{} == 0 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a3259e372bb1a991cfc18d2cab7c76712}{Solve\+LinearB}} (double a, double c, double $\ast$x1, double $\ast$x2)
+\begin{DoxyCompactList}\small\item\em quadratic solution if \char`\"{}b\char`\"{} == 0 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a86a42842a7fecd91eeb238fc618b300f}{Solve\+LinearC}} (double a, double b, double $\ast$x1, double $\ast$x2)
+\begin{DoxyCompactList}\small\item\em quadratic solution if \char`\"{}b\char`\"{} == 0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a78a5730d586f6aef622a27cfb9daa2d8}{Print\+Results}} (int sum, double x1, double x2)
+\begin{DoxyCompactList}\small\item\em print roots and quantity roots \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_afd590f44da46704ce44e9bcd8d10df05}{Unit\+Test}} ()
+\item 
+int \mbox{\hyperlink{main_8cpp_af8414b79572a0276f0cdfbb6da5010aa}{Is\+Zero}} (double value)
+\begin{DoxyCompactList}\small\item\em check on on \char`\"{}zero\char`\"{} of double \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{main_8cpp_a82c7d1e88152d05c27a76b5607ed283d}{Input\+\_\+calloc}} (const char text\mbox{[}$\,$\mbox{]}, const int amount)
+\begin{DoxyCompactList}\small\item\em input function \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8cpp_aa93f0eb578d23995850d61f7d61c55c1}\label{main_8cpp_aa93f0eb578d23995850d61f7d61c55c1}} 
+\index{main.cpp@{main.cpp}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{FALSE}{FALSE}}
+{\footnotesize\ttfamily \#define F\+A\+L\+SE~0}
+
+
+
+Definition at line 17 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a28c2d2643e62aabda9552ff5adec451d}\label{main_8cpp_a28c2d2643e62aabda9552ff5adec451d}} 
+\index{main.cpp@{main.cpp}!NORESULT@{NORESULT}}
+\index{NORESULT@{NORESULT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{NORESULT}{NORESULT}}
+{\footnotesize\ttfamily \#define N\+O\+R\+E\+S\+U\+LT~0}
+
+
+
+Definition at line 12 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a78a18ca3348b4ffa93578a21a8f54d2f}\label{main_8cpp_a78a18ca3348b4ffa93578a21a8f54d2f}} 
+\index{main.cpp@{main.cpp}!ONERESULT@{ONERESULT}}
+\index{ONERESULT@{ONERESULT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ONERESULT}{ONERESULT}}
+{\footnotesize\ttfamily \#define O\+N\+E\+R\+E\+S\+U\+LT~1}
+
+
+
+Definition at line 13 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ab946e2e7f7679350627acfded8e2658b}\label{main_8cpp_ab946e2e7f7679350627acfded8e2658b}} 
+\index{main.cpp@{main.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST}{TEST}}
+{\footnotesize\ttfamily \#define T\+E\+ST~1}
+
+
+
+Definition at line 7 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}\label{main_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}} 
+\index{main.cpp@{main.cpp}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{TRUE}{TRUE}}
+{\footnotesize\ttfamily \#define T\+R\+UE~1}
+
+
+
+Definition at line 16 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ae8622b44263ff9e536c6a9e28c3a23aa}\label{main_8cpp_ae8622b44263ff9e536c6a9e28c3a23aa}} 
+\index{main.cpp@{main.cpp}!TWORESULT@{TWORESULT}}
+\index{TWORESULT@{TWORESULT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{TWORESULT}{TWORESULT}}
+{\footnotesize\ttfamily \#define T\+W\+O\+R\+E\+S\+U\+LT~2}
+
+
+
+Definition at line 14 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_abc207fc2074a4aa06980f3330bab0dd7}\label{main_8cpp_abc207fc2074a4aa06980f3330bab0dd7}} 
+\index{main.cpp@{main.cpp}!UNLIMRESULT@{UNLIMRESULT}}
+\index{UNLIMRESULT@{UNLIMRESULT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{UNLIMRESULT}{UNLIMRESULT}}
+{\footnotesize\ttfamily \#define U\+N\+L\+I\+M\+R\+E\+S\+U\+LT~3}
+
+
+
+Definition at line 15 of file main.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a82c7d1e88152d05c27a76b5607ed283d}\label{main_8cpp_a82c7d1e88152d05c27a76b5607ed283d}} 
+\index{main.cpp@{main.cpp}!Input\_calloc@{Input\_calloc}}
+\index{Input\_calloc@{Input\_calloc}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Input\_calloc()}{Input\_calloc()}}
+{\footnotesize\ttfamily double $\ast$ Input\+\_\+calloc (\begin{DoxyParamCaption}\item[{const char}]{text\mbox{[}$\,$\mbox{]},  }\item[{const int}]{amount }\end{DoxyParamCaption})}
+
+
+
+input function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\mbox{[}$\,$\mbox{]}} & const char it is text which will be write before read number \\
+\hline
+{\em amount} & const int it is amount of variables \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double$\ast$ pointer on array of variables 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_af8414b79572a0276f0cdfbb6da5010aa}\label{main_8cpp_af8414b79572a0276f0cdfbb6da5010aa}} 
+\index{main.cpp@{main.cpp}!IsZero@{IsZero}}
+\index{IsZero@{IsZero}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{IsZero()}{IsZero()}}
+{\footnotesize\ttfamily int Is\+Zero (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+check on on \char`\"{}zero\char`\"{} of double 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & double verifiable value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int T\+R\+UE if \char`\"{}zero\char`\"{} else F\+A\+L\+SE 
+\end{DoxyReturn}
+
+
+Definition at line 203 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a78a5730d586f6aef622a27cfb9daa2d8}\label{main_8cpp_a78a5730d586f6aef622a27cfb9daa2d8}} 
+\index{main.cpp@{main.cpp}!PrintResults@{PrintResults}}
+\index{PrintResults@{PrintResults}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{PrintResults()}{PrintResults()}}
+{\footnotesize\ttfamily void Print\+Results (\begin{DoxyParamCaption}\item[{int}]{sum,  }\item[{double}]{x1,  }\item[{double}]{x2 }\end{DoxyParamCaption})}
+
+
+
+print roots and quantity roots 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sum} & int quantity roots \\
+\hline
+{\em x1} & double first root \\
+\hline
+{\em x2} & double second root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_afd2562725d73678eb0bb27d17e90be40}\label{main_8cpp_afd2562725d73678eb0bb27d17e90be40}} 
+\index{main.cpp@{main.cpp}!SolveLinearA@{SolveLinearA}}
+\index{SolveLinearA@{SolveLinearA}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SolveLinearA()}{SolveLinearA()}}
+{\footnotesize\ttfamily int Solve\+LinearA (\begin{DoxyParamCaption}\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1 }\end{DoxyParamCaption})}
+
+
+
+quadratic solution if \char`\"{}a\char`\"{} == 0 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & double coefficient before x \\
+\hline
+{\em c} & double coefficient without x \\
+\hline
+{\em x1} & double$\ast$ pointer on first root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int how many roots 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a3259e372bb1a991cfc18d2cab7c76712}\label{main_8cpp_a3259e372bb1a991cfc18d2cab7c76712}} 
+\index{main.cpp@{main.cpp}!SolveLinearB@{SolveLinearB}}
+\index{SolveLinearB@{SolveLinearB}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SolveLinearB()}{SolveLinearB()}}
+{\footnotesize\ttfamily int Solve\+LinearB (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+quadratic solution if \char`\"{}b\char`\"{} == 0 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & double coefficient before x$^\wedge$2 \\
+\hline
+{\em b} & double coefficient before x \\
+\hline
+{\em c} & double coefficient without x \\
+\hline
+{\em x1} & double$\ast$ pointer on first root \\
+\hline
+{\em x2} & double$\ast$ pointer on second root \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 140 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a86a42842a7fecd91eeb238fc618b300f}\label{main_8cpp_a86a42842a7fecd91eeb238fc618b300f}} 
+\index{main.cpp@{main.cpp}!SolveLinearC@{SolveLinearC}}
+\index{SolveLinearC@{SolveLinearC}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SolveLinearC()}{SolveLinearC()}}
+{\footnotesize\ttfamily int Solve\+LinearC (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+quadratic solution if \char`\"{}b\char`\"{} == 0 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & double coefficient before x$^\wedge$2 \\
+\hline
+{\em b} & double coefficient before x \\
+\hline
+{\em x1} & double$\ast$ pointer on first root \\
+\hline
+{\em x2} & double$\ast$ pointer on second root \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 163 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ab2dd9b24e0e487efdd1cd1f40dd3a023}\label{main_8cpp_ab2dd9b24e0e487efdd1cd1f40dd3a023}} 
+\index{main.cpp@{main.cpp}!SolveSquare@{SolveSquare}}
+\index{SolveSquare@{SolveSquare}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SolveSquare()}{SolveSquare()}}
+{\footnotesize\ttfamily int Solve\+Square (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+quadratic solution 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & double coefficient before x$^\wedge$2 \\
+\hline
+{\em b} & double coefficient before x \\
+\hline
+{\em c} & double coefficient without x \\
+\hline
+{\em x1} & double$\ast$ pointer on first root \\
+\hline
+{\em x2} & double$\ast$ pointer on second root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int how many roots 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_afd590f44da46704ce44e9bcd8d10df05}\label{main_8cpp_afd590f44da46704ce44e9bcd8d10df05}} 
+\index{main.cpp@{main.cpp}!UnitTest@{UnitTest}}
+\index{UnitTest@{UnitTest}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{UnitTest()}{UnitTest()}}
+{\footnotesize\ttfamily void Unit\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 209 of file main.\+cpp.
+

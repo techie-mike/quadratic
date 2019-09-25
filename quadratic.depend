@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1569404604 source:d:\code\quadratic\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<assert.h>
+
