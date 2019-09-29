@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['test_12',['TEST',['../main_8cpp.html#ab946e2e7f7679350627acfded8e2658b',1,'main.cpp']]],
-  ['true_13',['TRUE',['../main_8cpp.html#aa8cecfc5c5c054d2875c03e77b7be15d',1,'main.cpp']]],
-  ['tworesult_14',['TWORESULT',['../main_8cpp.html#ae8622b44263ff9e536c6a9e28c3a23aa',1,'main.cpp']]]
+  ['solvelineara_10',['SolveLinearA',['../main_8cpp.html#afd2562725d73678eb0bb27d17e90be40',1,'main.cpp']]],
+  ['solvesquare_11',['SolveSquare',['../main_8cpp.html#ab2dd9b24e0e487efdd1cd1f40dd3a023',1,'main.cpp']]],
+  ['switchtest_12',['switchTEST',['../main_8cpp.html#ab301c8525809939400935e5b4f1802c3',1,'main.cpp']]]
 ];

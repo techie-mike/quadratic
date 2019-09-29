@@ -72,6 +72,14 @@ double *InputCalloc(const char text[], const int amount){
     return data;
 }
 
+/** \brief maximum error calculation
+ *
+ * \param a double input a
+ * \param b double input b
+ * \param c double input c
+ * \return double size of error
+ *
+ */
 double MaxError(double a, double b, double c){
     assert(isfinite(a));
     assert(isfinite(b));
@@ -92,9 +100,17 @@ double MaxError(double a, double b, double c){
     return 1e-10 * max_pow;
 }
 
+/** \brief calculation exhibitor of double
+ *
+ * \param x double input a number
+ * \return int pow of 10
+ *
+ */
 int HowPow(double x){
     int num_pow = 0;
     x = abs(x);
+
+    if (fabs(x) <= 1e-30) return num_pow;
     if (x >= 10){
         while (x >= 10){
             num_pow++;
@@ -129,7 +145,7 @@ int SolveSquare(double a, double b, double c, double *x1, double *x2){
 
     double full_error = MaxError(a,b,c);
     assert(isfinite(full_error));
-    //printf("full_error = %lg", full_error);
+    //printf("full_error = %lg\n", full_error);
 
     if (IsZero(a, full_error)) return SolveLinearA(b, c, x1);
     if (IsZero(b, full_error)) {
@@ -178,6 +194,8 @@ int SolveSquare(double a, double b, double c, double *x1, double *x2){
  *
  */
 int SolveLinearA(double b, double c, double *x1){
+    assert(x1 != 0);
+
     if (c == 0) return UNLIMRESULT;
     else {
         *x1 = -c/b;
@@ -266,6 +284,7 @@ void UnitTest(){
                 assert(IsZero(x1 - arrayTEST[i].x1, full_error));
             }
         }
+
         if (sum == 2){
             if (!IsZero(x1 - arrayTEST[i].x1, full_error)){
                 printf("Error on %d test:\nprogram: %lg  test:  %lg\n", i, x1, arrayTEST[i].x1);
@@ -276,6 +295,7 @@ void UnitTest(){
                 assert(IsZero(x2 - arrayTEST[i].x2, full_error));
             }
         }
+        //printf("%d test - OK\n", i);
     }
     printf("test : OK");
 }

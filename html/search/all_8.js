@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['unittest_15',['UnitTest',['../main_8cpp.html#afd590f44da46704ce44e9bcd8d10df05',1,'main.cpp']]],
-  ['unlimresult_16',['UNLIMRESULT',['../main_8cpp.html#abc207fc2074a4aa06980f3330bab0dd7',1,'main.cpp']]]
+  ['true_13',['TRUE',['../main_8cpp.html#a71e9226a899d0cf9777bd19369f101df',1,'main.cpp']]],
+  ['tworesult_14',['TWORESULT',['../main_8cpp.html#a0c9ac130526207d83129c9de26ae05de',1,'main.cpp']]]
 ];

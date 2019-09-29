@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oneresult_6',['ONERESULT',['../main_8cpp.html#a78a18ca3348b4ffa93578a21a8f54d2f',1,'main.cpp']]]
+  ['noresult_7',['NORESULT',['../main_8cpp.html#a4cbed0d71dd1c5b205197107e898ea2a',1,'main.cpp']]]
 ];

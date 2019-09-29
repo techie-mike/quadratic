@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['solvelineara_22',['SolveLinearA',['../main_8cpp.html#afd2562725d73678eb0bb27d17e90be40',1,'main.cpp']]],
-  ['solvelinearb_23',['SolveLinearB',['../main_8cpp.html#a3259e372bb1a991cfc18d2cab7c76712',1,'main.cpp']]],
-  ['solvelinearc_24',['SolveLinearC',['../main_8cpp.html#a86a42842a7fecd91eeb238fc618b300f',1,'main.cpp']]],
-  ['solvesquare_25',['SolveSquare',['../main_8cpp.html#ab2dd9b24e0e487efdd1cd1f40dd3a023',1,'main.cpp']]]
+  ['printresults_23',['PrintResults',['../main_8cpp.html#a78a5730d586f6aef622a27cfb9daa2d8',1,'main.cpp']]]
 ];
