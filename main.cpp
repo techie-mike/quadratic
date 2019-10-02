@@ -5,7 +5,7 @@
 
 //--uncomment this #define if want turn on UnitTest--//
 
-#define switchTEST
+//#define switchTEST
 
 //-------------------------//
 
@@ -18,7 +18,7 @@ const int FALSE      = 0;
 
 
 int SolveSquare(double a, double b, double c, double * x1, double *x2);
-int SolveLinearA(double b, double c, double *x1);
+int SolveLinearA(double b, double c, double *x1, double full_error);
 void PrintResults(int sum, double x1, double x2);
 void UnitTest();
 int IsZero(double value, double full_error);
@@ -59,7 +59,7 @@ double *InputCalloc(const char text[], const int amount){
     assert(text != 0);
     assert(amount > 0);
 
-    printf(text);
+    printf("%s", text);
     double *data = (double*) calloc(amount, sizeof(data[0]));
     assert(data != 0);
     for (int i = 0; i < amount; i++){
@@ -147,13 +147,14 @@ int SolveSquare(double a, double b, double c, double *x1, double *x2){
     assert(isfinite(full_error));
     //printf("full_error = %lg\n", full_error);
 
-    if (IsZero(a, full_error)) return SolveLinearA(b, c, x1);
+    if (IsZero(a, full_error)) return SolveLinearA(b, c, x1, full_error);
     if (IsZero(b, full_error)) {
         if (c == 0){
             *x1 = 0;
             return ONERESULT;
             }
             else{
+		if (c > 0) return NORESULT;
                 //printf("%lg %lg", c, a);
                 *x1 = sqrt(-c/a);
                 *x2 = -*x1;
@@ -163,7 +164,7 @@ int SolveSquare(double a, double b, double c, double *x1, double *x2){
     }
     if (IsZero(c, full_error)){
         *x1 = 0;
-        SolveLinearA(a, b, x2);
+        SolveLinearA(a, b, x2, full_error);
         assert(isfinite(*x2));
         return TWORESULT;
     }
@@ -193,11 +194,15 @@ int SolveSquare(double a, double b, double c, double *x1, double *x2){
  * \return int how many roots
  *
  */
-int SolveLinearA(double b, double c, double *x1){
+int SolveLinearA(double b, double c, double *x1, double full_error){
     assert(x1 != 0);
 
-    if (c == 0) return UNLIMRESULT;
+    if (IsZero(b, full_error)) return UNLIMRESULT;
     else {
+	if (IsZero(c, full_error)) {
+		*x1 = 0;
+		return ONERESULT;
+	}
         *x1 = -c/b;
         assert(isfinite(*x1));
         return ONERESULT;
@@ -216,16 +221,16 @@ int SolveLinearA(double b, double c, double *x1){
 void PrintResults(int sum, double x1, double x2){
     switch (sum) {
     case NORESULT:
-        printf("NO RESULTS");
+        printf("NO RESULTS\n");
         break;
     case ONERESULT:
-        printf("One root: %lg", x1);
+        printf("One root: %lg\n", x1);
         break;
     case TWORESULT:
-        printf("Two roots: %lg %lg", x1, x2);
+        printf("Two roots: %lg %lg\n", x1, x2);
         break;
     case UNLIMRESULT:
-        printf("UNLIMITED RESULTS");
+        printf("UNLIMITED RESULTS\n");
         break;
     }
 }
@@ -246,9 +251,7 @@ int IsZero(double value, double full_error){
 void UnitTest(){
     printf("TEST\n");
     const int nTest = 4;
-    //  Number of arrayTEST[][i]
-    //  i  =  | 0  1  2  3   4   5
-    //  mean  | a  b  c  x1  x2  sum
+
     struct TEST {
         double a;
         double b;
@@ -297,6 +300,6 @@ void UnitTest(){
         }
         //printf("%d test - OK\n", i);
     }
-    printf("test : OK");
+    printf("test : OK\n");
 }
 #endif
