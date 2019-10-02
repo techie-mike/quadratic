@@ -16,6 +16,8 @@ const int UNLIMRESULT= 3;
 const int TRUE       = 1;
 const int FALSE      = 0;
 
+const double DEFAULT_ERROR = 1e-10;
+
 
 int SolveSquare(double a, double b, double c, double * x1, double *x2);
 int SolveLinearA(double b, double c, double *x1, double full_error);
@@ -23,7 +25,6 @@ void PrintResults(int sum, double x1, double x2);
 void UnitTest();
 int IsZero(double value, double full_error);
 double *InputCalloc(const char text[], int amount);
-int HowPow(double x);
 double MaxError(double a, double b, double c);
 
 
@@ -85,47 +86,19 @@ double MaxError(double a, double b, double c){
     assert(isfinite(b));
     assert(isfinite(c));
 
-    int max_pow = HowPow(a);
+    int max_pow = log10(a);
 
-    int temp = HowPow(b);
+    int temp = log10(b);
     if (max_pow < temp){
         max_pow = temp;
     }
 
-    temp = HowPow(c);
+    temp = log10(c);
     if (max_pow < temp){
         max_pow = temp;
     }
-    max_pow = pow(10, max_pow);
-    return 1e-10 * max_pow;
-}
-
-/** \brief calculation exhibitor of double
- *
- * \param x double input a number
- * \return int pow of 10
- *
- */
-int HowPow(double x){
-    int num_pow = 0;
-    x = abs(x);
-
-    if (fabs(x) <= 1e-30) return num_pow;
-    if (x >= 10){
-        while (x >= 10){
-            num_pow++;
-            x /= 10;
-        }
-    }
-
-    if (x < 1){
-        while (x < 1){
-            num_pow--;
-            x *= 10;
-        }
-    }
-
-    return num_pow;
+    //max_pow = log10(10, max_pow);
+    return DEFAULT_ERROR * max_pow;
 }
 
 /** \brief quadratic solution
@@ -142,6 +115,8 @@ int SolveSquare(double a, double b, double c, double *x1, double *x2){
     /////////////////////////
     // a*x^2 + b*x + c = 0 //
     /////////////////////////
+    assert(x1 != nullptr);
+    assert(x2 != nullptr);
 
     double full_error = MaxError(a,b,c);
     assert(isfinite(full_error));
@@ -149,7 +124,7 @@ int SolveSquare(double a, double b, double c, double *x1, double *x2){
 
     if (IsZero(a, full_error)) return SolveLinearA(b, c, x1, full_error);
     if (IsZero(b, full_error)) {
-        if (c == 0){
+        if (IsZero(c, full_error)){
             *x1 = 0;
             return ONERESULT;
             }
@@ -171,11 +146,13 @@ int SolveSquare(double a, double b, double c, double *x1, double *x2){
 
     double d = b*b - 4.0*a*c;
 
-    if (d < 0) return NORESULT;
-    if (d == 0) {
+    if (IsZero(d, full_error)) {
         *x1 = -b/(2*a);
         return ONERESULT;
     }
+
+    if (d < 0) return NORESULT;
+
     d = sqrt(d);
     *x1 = (-b - d)/2/a;
     *x2 = (-b + d)/2/a;
